@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Consultas</title>
+</head>
+
+<body>
+    <a class="boton-volver" href="index.html"><i class='bx bx-chevron-left'></i></a>
+
+    <section class="consultas">
+
+        <div class="contenedor-form contenedor">
+            <form class="form" action="#" autocomplete="off">
+                <h2 class="contacto-titulo">Contáctanos</h2>
+                <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+                <input type="email" name="email" placeholder="Ingrese su email" required>
+                <textarea name="mensaje" placeholder="Escriba su consulta" style="resize: none;" required></textarea>
+                <input type="submit" name="enviar" value="Enviar mensaje" class="enviar">
+            </form>
+
+            <script>
+                function iniciar() {
+                    var boton = document.getElementById("enviar");
+                    boton.addEventListener("click", enviarformulario);
+                }
+                function enviarformulario() {
+                    var formulario = document.querySelector("form[name='informacion']");
+                    var valido = formulario.checkValidity();
+                    if (valido) {
+                        formulario.submit();
+                    } else {
+                        alert("El formulario no puede ser enviado");
+                    }
+                }
+                window.addEventListener("load", iniciar); 
+            </script>
+        </div>
+
+    </section>
+</body>
+
+</html>
