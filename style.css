@@ -42,6 +42,10 @@
     gap: 5%;
 }
 
+.info a{
+    color: blueviolet;
+}
+
 .nosotros {
     background-color: whitesmoke;
     padding-bottom: 20px;
